@@ -112,12 +112,12 @@ export default class SearchBar extends Component {
       toVal = 0;
     }
 
-    Animated.timing(this.state.animatedValue, {
-      duration: Theme.duration.toggleSearchBar,
-      toValue: toVal
-    }).start(() => {
+    // Animated.timing(this.state.animatedValue, {
+    //   duration: Theme.duration.toggleSearchBar,
+    //   toValue: toVal
+    // }).start(() => {
       this.setState({ isSearching });
-    });
+    // });
   }
 
   cancelSearch() {
