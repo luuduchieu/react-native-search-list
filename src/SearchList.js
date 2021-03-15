@@ -305,22 +305,22 @@ export default class SearchList extends Component {
 
   enterSearchState() {
     this.setState({ isSearching: true });
-    Animated.timing(this.state.animatedValue, {
-      duration: this.props.searchBarToggleDuration || Theme.duration.toggleSearchBar,
-      toValue: 1,
-      useNativeDriver: true
-    }).start(() => {});
+    // Animated.timing(this.state.animatedValue, {
+    //   duration: this.props.searchBarToggleDuration || Theme.duration.toggleSearchBar,
+    //   toValue: 1,
+    //   useNativeDriver: true
+    // }).start(() => {});
   }
 
   exitSearchState() {
-    Animated.timing(this.state.animatedValue, {
-      duration: this.props.searchBarToggleDuration || Theme.duration.toggleSearchBar,
-      toValue: 0,
-      useNativeDriver: true
-    }).start(() => {
+    // Animated.timing(this.state.animatedValue, {
+    //   duration: this.props.searchBarToggleDuration || Theme.duration.toggleSearchBar,
+    //   toValue: 0,
+    //   useNativeDriver: true
+    // }).start(() => {
       this.search('');
       this.setState({ isSearching: false });
-    });
+    // });
   }
 
   onFocus() {
